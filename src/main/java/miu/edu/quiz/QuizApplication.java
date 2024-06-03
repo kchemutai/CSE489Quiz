@@ -32,7 +32,7 @@ public class QuizApplication implements CommandLineRunner {
 		employeeService.save(employee3);
 		employeeService.save(employee4);
 
-		employeeService.findAll().stream().sorted(Comparator.comparing(Employee::getSalary)
+		employeeService.findAll().stream().sorted(Comparator.comparing(Employee::getLastName)
 				.thenComparing(Comparator.comparing(Employee::getFirstName))).forEach(System.out::println);
 	}
 }
